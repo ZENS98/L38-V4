@@ -193,10 +193,15 @@ img {
 }
 
 .hero-media,
+.hero-media picture,
 .hero-media img,
 .hero-gradient {
   position: absolute;
   inset: 0;
+}
+
+.hero-media picture {
+  display: block;
 }
 
 .hero-media img {
@@ -1437,6 +1442,12 @@ h3 {
     padding-bottom: 14px;
   }
 
+  .hero-media img {
+    object-position: center;
+    transform: none;
+    animation: none;
+  }
+
   h1 {
     font-size: 48px;
     line-height: 1.08349;
@@ -1595,16 +1606,21 @@ h3 {
 
   .site-footer {
     flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 150px;
+    align-items: center;
+    padding-inline: 16px;
+    padding-bottom: calc(154px + env(safe-area-inset-bottom));
   }
 
   .quick-contact {
-    right: 16px;
-    bottom: 16px;
+    right: auto;
+    left: 50%;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    width: min(360px, calc(100vw - 32px));
+    transform: translateX(-50%);
   }
 
   .quick-contact a {
+    width: 100%;
     min-height: 50px;
   }
 }
