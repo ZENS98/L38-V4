@@ -898,43 +898,59 @@ h3 {
   display: grid;
   place-items: center;
   margin-top: 8px;
-  padding: 12px;
+  padding: 14px;
   overflow: hidden;
-  border: 1px solid rgba(200, 161, 74, 0.28);
-  border-radius: 8px;
-  background: #fffdf6;
+  border: 1px solid rgba(200, 161, 74, 0.3);
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 249, 232, 0.96)),
+    #fffdf6;
   box-shadow:
-    0 14px 28px rgba(16, 17, 19, 0.12),
-    0 0 0 1px rgba(244, 228, 185, 0.42),
-    0 0 24px rgba(200, 161, 74, 0.08);
+    0 18px 34px rgba(16, 17, 19, 0.12),
+    0 0 0 1px rgba(244, 228, 185, 0.5),
+    0 0 28px rgba(200, 161, 74, 0.12);
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
 .leader-qr-link::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 5px;
   z-index: 1;
   pointer-events: none;
-  padding: 4px;
-  border-radius: inherit;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 0 1px rgba(200, 161, 74, 0.24),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.72),
+    inset 0 0 0 7px rgba(244, 228, 185, 0.42),
+    inset 0 0 18px rgba(244, 228, 185, 0.26);
+}
+
+.leader-qr-link::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 11px;
   background:
-    conic-gradient(
-      from 0deg,
-      rgba(200, 161, 74, 0) 0deg,
-      rgba(200, 161, 74, 0) 34deg,
-      rgba(255, 255, 255, 0.98) 46deg,
-      rgba(252, 224, 154, 0.98) 58deg,
-      rgba(200, 161, 74, 0.92) 70deg,
-      rgba(200, 161, 74, 0) 94deg,
-      rgba(200, 161, 74, 0) 182deg,
-      rgba(255, 255, 255, 0.88) 194deg,
-      rgba(252, 224, 154, 0.9) 206deg,
-      rgba(200, 161, 74, 0.76) 218deg,
-      rgba(200, 161, 74, 0) 246deg,
-      rgba(200, 161, 74, 0) 360deg
-    );
-  filter: drop-shadow(0 0 7px rgba(252, 224, 154, 0.58));
+    radial-gradient(circle at 18% 86%, rgba(255, 211, 95, 0.26), transparent 16%),
+    radial-gradient(circle at 86% 20%, rgba(255, 244, 206, 0.42), transparent 17%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.22), transparent 46%, rgba(200, 161, 74, 0.08));
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+.qr-light {
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  will-change: transform, opacity;
+}
+
+.qr-light-main,
+.qr-light-secondary {
+  z-index: 3;
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -943,20 +959,58 @@ h3 {
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   mask-composite: exclude;
-  animation: qrLedSweep 3.6s linear infinite;
-  will-change: transform;
 }
 
-.leader-qr-link::after {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  z-index: 1;
-  pointer-events: none;
-  border-radius: 6px;
-  box-shadow:
-    inset 0 0 0 1px rgba(200, 161, 74, 0.16),
-    inset 0 0 18px rgba(244, 228, 185, 0.2);
+.qr-light-main {
+  inset: 0;
+  padding: 5px;
+  background:
+    conic-gradient(
+      from -52deg,
+      transparent 0deg 27deg,
+      rgba(255, 227, 142, 0.16) 38deg,
+      rgba(255, 197, 67, 0.64) 49deg,
+      rgba(255, 244, 206, 0.98) 58deg,
+      rgba(255, 183, 39, 1) 64deg,
+      rgba(255, 227, 137, 0.64) 77deg,
+      rgba(255, 211, 94, 0.18) 91deg,
+      transparent 108deg 360deg
+    );
+  filter:
+    drop-shadow(0 0 5px rgba(255, 225, 142, 0.92))
+    drop-shadow(0 0 14px rgba(200, 161, 74, 0.6));
+  animation: qrLightOrbit 4.2s linear infinite;
+}
+
+.qr-light-secondary {
+  inset: 7px;
+  padding: 3px;
+  border-radius: 9px;
+  background:
+    conic-gradient(
+      from 136deg,
+      transparent 0deg 43deg,
+      rgba(255, 227, 142, 0.12) 55deg,
+      rgba(255, 197, 67, 0.44) 66deg,
+      rgba(255, 250, 226, 0.86) 73deg,
+      rgba(255, 185, 40, 0.76) 80deg,
+      rgba(255, 227, 137, 0.4) 92deg,
+      transparent 112deg 360deg
+    );
+  filter: drop-shadow(0 0 8px rgba(244, 228, 185, 0.58));
+  animation: qrLightOrbit 4.2s linear infinite reverse;
+}
+
+.qr-light-reflection {
+  inset: 9px;
+  z-index: 3;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 232, 157, 0.18), transparent),
+    radial-gradient(circle at 50% 0, rgba(255, 255, 255, 0.44), transparent 22%),
+    radial-gradient(circle at 50% 100%, rgba(255, 199, 58, 0.3), transparent 20%);
+  opacity: 0.42;
+  animation: qrLightReflection 4.2s ease-in-out infinite;
 }
 
 .leader-qr-link:hover,
@@ -971,10 +1025,13 @@ h3 {
 
 .leader-qr-link img {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   width: min(210px, 54vw);
   height: auto;
   border-radius: 6px;
+  box-shadow:
+    0 0 0 1px rgba(200, 161, 74, 0.2),
+    0 8px 18px rgba(16, 17, 19, 0.08);
 }
 
 .zalo-link {
@@ -1300,13 +1357,31 @@ h3 {
   }
 }
 
-@keyframes qrLedSweep {
+@keyframes qrLightOrbit {
   from {
     transform: rotate(0deg);
   }
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes qrLightReflection {
+  0%,
+  100% {
+    opacity: 0.34;
+    transform: scale(0.985);
+  }
+
+  38% {
+    opacity: 0.56;
+    transform: scale(1.01);
+  }
+
+  64% {
+    opacity: 0.42;
+    transform: scale(1);
   }
 }
 
@@ -1621,7 +1696,15 @@ h3 {
 
   .quick-contact a {
     width: 100%;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    justify-items: center;
     min-height: 50px;
+    padding: 8px 18px;
+  }
+
+  .quick-contact strong {
+    text-align: center;
   }
 }
 
@@ -1635,8 +1718,8 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 
-  .leader-qr-link::before {
-    animation-duration: 6s !important;
+  .leader-qr-link .qr-light {
+    animation-duration: 5.8s !important;
     animation-iteration-count: infinite !important;
   }
 }
