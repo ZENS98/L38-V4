@@ -17,6 +17,7 @@
     "ko": "韩语"
   },
   "nav": {
+    "home": "首页",
     "about": "关于我们",
     "services": "业务领域",
     "markets": "市场",
@@ -129,8 +130,10 @@
     "directorQrAlt": "Au Vo Long Zalo 二维码",
     "financeRole": "财务副董事",
     "financeName": "Vu Hang",
-    "financeAlt": "L38 会议区域",
+    "financeAlt": "Vu Hang 照片",
     "financeQrAlt": "Vu Hang Zalo 二维码",
+    "phoneLabel": "电话：",
+    "emailLabel": "邮箱：",
     "openZalo": "打开 Zalo"
   },
   "gallery": {

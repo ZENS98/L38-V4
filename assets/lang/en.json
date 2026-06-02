@@ -17,6 +17,7 @@
     "ko": "Korean"
   },
   "nav": {
+    "home": "Home",
     "about": "About",
     "services": "Services",
     "markets": "Markets",
@@ -129,8 +130,10 @@
     "directorQrAlt": "Au Vo Long Zalo QR code",
     "financeRole": "Deputy Finance Director",
     "financeName": "Vu Hang",
-    "financeAlt": "L38 meeting area",
+    "financeAlt": "Portrait of Vu Hang",
     "financeQrAlt": "Vu Hang Zalo QR code",
+    "phoneLabel": "Phone:",
+    "emailLabel": "Email:",
     "openZalo": "Open Zalo"
   },
   "gallery": {

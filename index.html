@@ -5,18 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="L38 Company - Import export, international trading and logistics services."
+      content="Công ty L38 cung cấp dịch vụ xuất nhập khẩu, thương mại và logistics quốc tế từ văn phòng Vincom Center Đồng Khởi, TP.HCM."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://l38.vn/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="L38 Company | Global Trade & Logistics" />
+    <meta property="og:url" content="https://l38.vn/" />
+    <meta property="og:site_name" content="L38 Company" />
+    <meta property="og:title" content="L38 Company | Import Export Services & Trading" />
     <meta
       property="og:description"
-      content="Import export, international trading and logistics services from Ho Chi Minh City."
+      content="Công ty L38 cung cấp dịch vụ xuất nhập khẩu, thương mại và logistics quốc tế từ văn phòng Vincom Center Đồng Khởi, TP.HCM."
     />
-    <meta property="og:image" content="./assets/images/office/office-hero.jpg" />
-    <title>L38 Company | Global Trade & Logistics</title>
+    <meta property="og:image" content="https://l38.vn/assets/images/office/office-hero.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="L38 Company | Import Export Services & Trading" />
+    <meta
+      name="twitter:description"
+      content="Công ty L38 cung cấp dịch vụ xuất nhập khẩu, thương mại và logistics quốc tế từ văn phòng Vincom Center Đồng Khởi, TP.HCM."
+    />
+    <meta name="twitter:image" content="https://l38.vn/assets/images/office/office-hero.jpg" />
+    <title>L38 Company | Import Export Services & Trading</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "L38 Company",
+        "legalName": "Công ty TNHH Thương mại và Dịch vụ Xuất nhập khẩu L38",
+        "url": "https://l38.vn/",
+        "logo": "https://l38.vn/assets/images/logo-l38.png",
+        "description": "Import export services, international trading and logistics services from Ho Chi Minh City.",
+        "email": "Aulong@l38.vn",
+        "telephone": "+84 797 955 139",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "L18-11-13, Tầng 18, Vincom Center Đồng Khởi, 72 Lê Thánh Tôn",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        }
+      }
+    </script>
     <link rel="icon" href="./assets/images/logo-l38.png" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=leader-photo-wide-1" />
   </head>
   <body>
     <div class="page-shell">
@@ -30,6 +60,7 @@
         </a>
 
         <nav class="main-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="#home" data-i18n="nav.home">Trang chủ</a>
           <a href="#about" data-i18n="nav.about">Giới thiệu</a>
           <a href="#services" data-i18n="nav.services">Lĩnh vực</a>
           <a href="#markets" data-i18n="nav.markets">Thị trường</a>
@@ -73,11 +104,13 @@
             <p class="hero-copy" data-i18n="hero.copy">
               Đối tác tin cậy trong thương mại quốc tế, xuất nhập khẩu và logistics xuyên biên giới.
             </p>
-            <div class="hero-buttons">
-              <a class="btn primary" href="#contact" data-i18n="hero.ctaPrimary">Kết nối tư vấn</a>
-              <a class="btn secondary" href="#services" data-i18n="hero.ctaSecondary">Xem năng lực</a>
+            <div class="hero-action-row">
+              <div class="hero-buttons">
+                <a class="btn primary" href="#contact" data-i18n="hero.ctaPrimary">Kết nối tư vấn</a>
+                <a class="btn secondary" href="#services" data-i18n="hero.ctaSecondary">Xem năng lực</a>
+              </div>
+              <div class="hero-stats" data-hero-stats aria-label="L38 quick statistics"></div>
             </div>
-            <div class="hero-stats" data-hero-stats aria-label="L38 quick statistics"></div>
           </div>
           <div class="hero-panel reveal delay-1">
             <span data-i18n="hero.panelLabel">Văn phòng</span>
@@ -227,37 +260,59 @@
           <div class="leader-grid">
             <article class="leader-card reveal">
               <div class="leader-photo director-photo">
-                <picture>
-                  <source media="(max-width: 680px)" srcset="./assets/images/office/director-au-vo-long-portrait.png" />
-                  <img src="./assets/images/office/director-au-vo-long.png" alt="Au Vo Long" data-i18n-attr="alt:leadership.directorAlt" />
+                <picture class="leader-photo-main">
+                  <source media="(max-width: 680px)" srcset="./assets/images/office/director-au-vo-long.png" />
+                  <img src="./assets/images/office/director-au-vo-long-wide.png" alt="Au Vo Long" data-i18n-attr="alt:leadership.directorAlt" data-image-fallback="./assets/images/office/office-wide.png" />
                 </picture>
               </div>
               <div class="leader-info">
-                <span data-i18n="leadership.directorRole">Giám đốc</span>
                 <h3 data-i18n="leadership.directorName">Âu Võ Long</h3>
-                <a href="tel:0797955139">0797 955 139</a>
-                <a href="mailto:aulong@l38.vn">Aulong@l38.vn</a>
-                <a class="zalo-link" href="https://zalo.me/0797955139" target="_blank" rel="noopener">
+                <span class="leader-role" data-i18n="leadership.directorRole">Giám đốc</span>
+                <div class="leader-field">
+                  <span class="leader-label" data-i18n="leadership.phoneLabel">Phone:</span>
+                  <a class="leader-value leader-phone" href="tel:0797955139">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v2.35a2 2 0 0 1-2.18 2 19.82 19.82 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.82 19.82 0 0 1 2.13 3.6 2 2 0 0 1 4.11 1.4h2.36a2 2 0 0 1 2 1.72c.13.95.34 1.88.63 2.77a2 2 0 0 1-.45 2.11L7.65 9a16 16 0 0 0 7.35 7.35l1-1a2 2 0 0 1 2.11-.45c.89.29 1.82.5 2.77.63A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>0797 955 139</span>
+                  </a>
+                </div>
+                <div class="leader-field">
+                  <span class="leader-label" data-i18n="leadership.emailLabel">Email:</span>
+                  <a class="leader-email" href="mailto:aulong@l38.vn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 7-10 6L2 7"/></svg>
+                    <span>Aulong@l38.vn</span>
+                  </a>
+                </div>
+                <a class="leader-qr-link" href="https://zalo.me/0797955139" target="_blank" rel="noopener" aria-label="Mở Zalo Âu Võ Long">
                   <img src="./assets/images/qr/qr-au-vo-long.png" alt="Zalo QR Au Vo Long" data-i18n-attr="alt:leadership.directorQrAlt" />
-                  <span data-i18n="leadership.openZalo">Mở Zalo</span>
                 </a>
               </div>
             </article>
             <article class="leader-card reveal delay-1">
               <div class="leader-photo finance-photo">
-                <picture>
+                <picture class="leader-photo-main">
                   <source media="(max-width: 680px)" srcset="./assets/images/office/vu-hang-portrait.png" />
                   <img src="./assets/images/office/vu-hang-wide.png" alt="Vu Hang" data-i18n-attr="alt:leadership.financeAlt" />
                 </picture>
               </div>
               <div class="leader-info">
-                <span data-i18n="leadership.financeRole">Phó Giám đốc Tài Chính</span>
                 <h3 data-i18n="leadership.financeName">Vũ Hằng</h3>
-                <a href="tel:0916602368">0916 602 368</a>
-                <a href="mailto:vuhang@l38.vn">vuhang@l38.vn</a>
-                <a class="zalo-link" href="https://zalo.me/0916602368" target="_blank" rel="noopener">
+                <span class="leader-role" data-i18n="leadership.financeRole">Phó Giám đốc Tài Chính</span>
+                <div class="leader-field">
+                  <span class="leader-label" data-i18n="leadership.phoneLabel">Phone:</span>
+                  <a class="leader-value leader-phone" href="tel:0916602368">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v2.35a2 2 0 0 1-2.18 2 19.82 19.82 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.82 19.82 0 0 1 2.13 3.6 2 2 0 0 1 4.11 1.4h2.36a2 2 0 0 1 2 1.72c.13.95.34 1.88.63 2.77a2 2 0 0 1-.45 2.11L7.65 9a16 16 0 0 0 7.35 7.35l1-1a2 2 0 0 1 2.11-.45c.89.29 1.82.5 2.77.63A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>0916 602 368</span>
+                  </a>
+                </div>
+                <div class="leader-field">
+                  <span class="leader-label" data-i18n="leadership.emailLabel">Email:</span>
+                  <a class="leader-email" href="mailto:vuhang@l38.vn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 7-10 6L2 7"/></svg>
+                    <span>vuhang@l38.vn</span>
+                  </a>
+                </div>
+                <a class="leader-qr-link" href="https://zalo.me/0916602368" target="_blank" rel="noopener" aria-label="Mở Zalo Vũ Hằng">
                   <img src="./assets/images/qr/qr-vu-hang.png" alt="Zalo QR Vu Hang" data-i18n-attr="alt:leadership.financeQrAlt" />
-                  <span data-i18n="leadership.openZalo">Mở Zalo</span>
                 </a>
               </div>
             </article>
@@ -287,7 +342,7 @@
           <div class="map-layout">
             <a
               class="map-card reveal"
-              href="https://www.google.com/maps/search/?api=1&query=Vincom%20Center%20Dong%20Khoi%2C%2072%20L%C3%AA%20Th%C3%A1nh%20T%C3%B4n%2C%20S%C3%A0i%20G%C3%B2n%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vietnam"
+              href="https://maps.app.goo.gl/m53kHqq2BWEjGJE19?g_st=ic"
               target="_blank"
               rel="noopener"
             >
@@ -296,7 +351,7 @@
             </a>
             <a
               class="map-photo reveal delay-1"
-              href="https://www.google.com/maps/search/?api=1&query=Vincom%20Center%20Dong%20Khoi%2C%2072%20L%C3%AA%20Th%C3%A1nh%20T%C3%B4n%2C%20S%C3%A0i%20G%C3%B2n%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vietnam"
+              href="https://maps.app.goo.gl/m53kHqq2BWEjGJE19?g_st=ic"
               target="_blank"
               rel="noopener"
               aria-label="Open L38 office location on Google Maps"
@@ -328,13 +383,20 @@
               <strong>0797 955 139</strong>
             </a>
           </div>
-          <address class="address reveal">
-            <span data-i18n="contact.addressLabel">Địa chỉ văn phòng</span>
+          <a
+            class="contact-map reveal"
+            href="https://maps.app.goo.gl/m53kHqq2BWEjGJE19?g_st=ic"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open L38 office location on Google Maps"
+          >
+            <span class="contact-map-watermark" aria-hidden="true">L38 OFFICE</span>
+            <span class="contact-map-label" data-i18n="map.openLabel">Mở Google Maps</span>
             <strong data-i18n="contact.address">
               L18-11-13, Tầng 18, Vincom Center Đồng Khởi, 72 Lê Thánh Tôn, Phường Sài Gòn,
               TP. Hồ Chí Minh, Việt Nam
             </strong>
-          </address>
+          </a>
         </section>
       </main>
 

@@ -204,7 +204,23 @@ function setupLanguageSwitcher() {
   });
 }
 
+function setupImageFallbacks() {
+  document.querySelectorAll("img[data-image-fallback]").forEach((image) => {
+    image.addEventListener(
+      "error",
+      () => {
+        const fallback = image.dataset.imageFallback;
+        if (fallback && image.src !== fallback) {
+          image.src = fallback;
+        }
+      },
+      { once: true },
+    );
+  });
+}
+
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
+setupImageFallbacks();
 setupHeader();
 setupNavigation();
 setupLanguageSwitcher();

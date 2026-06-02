@@ -17,6 +17,7 @@
     "ko": "Tiếng Hàn"
   },
   "nav": {
+    "home": "Trang chủ",
     "about": "Giới thiệu",
     "services": "Lĩnh vực",
     "markets": "Thị trường",
@@ -129,8 +130,10 @@
     "directorQrAlt": "Mã QR Zalo của Âu Võ Long",
     "financeRole": "Phó Giám đốc Tài Chính",
     "financeName": "Vũ Hằng",
-    "financeAlt": "Khu vực họp của L38",
+    "financeAlt": "Ảnh Vũ Hằng",
     "financeQrAlt": "Mã QR Zalo của Vũ Hằng",
+    "phoneLabel": "Phone:",
+    "emailLabel": "Email:",
     "openZalo": "Mở Zalo"
   },
   "gallery": {

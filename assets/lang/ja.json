@@ -17,6 +17,7 @@
     "ko": "韓国語"
   },
   "nav": {
+    "home": "ホーム",
     "about": "会社概要",
     "services": "事業領域",
     "markets": "市場",
@@ -129,8 +130,10 @@
     "directorQrAlt": "Au Vo Long の Zalo QR コード",
     "financeRole": "財務副取締役",
     "financeName": "Vu Hang",
-    "financeAlt": "L38 会議スペース",
+    "financeAlt": "Vu Hang の写真",
     "financeQrAlt": "Vu Hang の Zalo QR コード",
+    "phoneLabel": "電話：",
+    "emailLabel": "メール：",
     "openZalo": "Zalo を開く"
   },
   "gallery": {
